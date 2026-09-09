@@ -1,0 +1,26 @@
+.styled-table {
+width: 500px;
+height: 500px;
+border-collapse: collapse;
+border: 10px solid black;
+margin: 50px;
+background-color: whitesmoke;
+}
+.styled-table td {
+border: 10px solid black;
+}
+.styled-table .white {
+background-color: whitesmoke;
+}
+.styled-table .red {
+background-color: red;
+}
+.styled-table .blue {
+background-color: blue;
+}
+.styled-table .yellow {
+background-color: yellow;
+}
+.styled-table .black {
+  background-color: black;
+}
