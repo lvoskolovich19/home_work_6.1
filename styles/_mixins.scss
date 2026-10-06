@@ -1,0 +1,14 @@
+@mixin flex ($g: 0px, $ai: stretch, $jc: start, $fd: row) {
+  display: flex;
+  gap: $g;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $fd;
+};
+
+@mixin Roboto ($fs, $fw, $ls: 0) {
+  font-family: "Roboto" sans-serif;
+  font-size: $fs;
+  font-weight: $fw;
+  letter-spacing: $ls;
+}

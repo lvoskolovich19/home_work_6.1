@@ -1,0 +1,260 @@
+@use "colors";
+@use "mixins";
+@use "vars";
+@use "reset.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400..00&display=swap');
+
+@media screen and (min-width: vars.$mobile-s) {
+.container {
+  padding: 0 20px;
+}
+
+.section1 {
+  background: #EEEFF1;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.menu {
+  @include mixins.flex (20px, start, center, column);
+  &__Item {
+  color: colors.$black;
+  @include mixins.Roboto (16px, 400, 1.6px);
+  }
+}
+
+.active {
+  color: colors.$primary;
+  font-weight: 500;
+}
+
+.main {
+  margin: 40px 0;
+  @include mixins.flex (30px, center, center, column);
+
+  &__heading {
+    @include mixins.Roboto (30px, 500);
+    color: colors.$black;
+    text-align: center;
+  }
+&__text {
+    @include mixins.Roboto (16px, 400);
+    color: colors.$grey;
+    line-height: 164.063%;
+    text-align: center;
+    width: 90%;
+  }
+  &__btn {
+    @include mixins.Roboto (16px, 400, 1.6px);
+    background-color: colors.$primary;
+    padding: 20px 30px;
+    color: colors.$white;
+  }
+}
+
+.section {
+&__heading {
+   @include mixins.Roboto (32px, 500);
+   color: colors.$black;
+   text-align: center;
+  }
+  &__text {
+   @include mixins.Roboto (16px, 400);
+   color: colors.$grey;
+   line-height: 164.063%;
+   text-align: center;
+   width: 90%;
+  }
+}
+.section2 {
+    @include mixins.flex (30px, center, center, column);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.section3 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: colors.$primary;
+}
+
+.list {
+  @include mixins.flex (30px, center, center, column);
+
+  &__Item { 
+    @include mixins.flex (10px, center, center);
+    color: colors.$white;
+  
+  &__Item__block {
+    @include mixins.flex (5px, center, center);
+    gap: 10px;
+    color: colors.$white;
+  
+  & > span:first-child {
+    @include mixins.Roboto (21px, 500);
+    color: colors.$white;
+  }
+  
+  & > span:last-child {
+    @include mixins.Roboto (16px, 400);
+    color: colors.$white;
+   }
+  } 
+ }
+}
+
+.section4 {
+      @include mixins.flex (30px, center, center, column);
+      background-color: colors.$darckwhite;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    &__video {
+      @include mixins.flex (0, center, center);
+      background: url("../img/video.jpg");
+      background-size: cover;
+      width: 280px;
+      height: 180px;
+
+    & > svg {
+     width: 44px;
+     height: 44px;
+  }
+ } 
+}
+
+.section5 {
+  @include mixins.flex (20px, start, center, column);
+  background-color: colors.$primary;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__text1 {
+    @include mixins.Roboto (21px, 500);
+    color: colors.$white;
+  }
+  &__text2 {
+    @include mixins.Roboto (13px, 400);
+    color: colors.$white;
+  }
+ }
+}
+
+@media screen and (min-width: vars.$mobile-m) {
+  .container {
+    padding: 0 35px;
+  }
+}
+@media screen and (min-width: vars.$mobile-l) {
+  .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: vars.$tablet) {
+  .menu {
+    flex-direction: row;
+    gap: 35px;
+  }
+  .section1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .main {
+    gap: 50px;
+    margin: 60px 0;
+  }
+  
+  .section2, .section3, .section4 {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    gap: 50px;
+  }
+  .list {
+    gap: 50px;
+  }
+  .section4 {
+  &__video {
+    width: 560px;
+    height: 350px;
+  
+  & > svg {
+    width: 62px;
+    height: 62px;
+  }
+ }
+}
+  .section5 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: vars.$laptop) {
+  .container {
+    padding-inline: 135px;
+  }
+  .main {
+    align-items: start;
+    &__text {
+      text-align: left;
+    }
+  }
+  .menu {
+    justify-content: start;
+    gap: 50px;
+  }
+  .list {
+    gap: 40px;
+    &__Item {
+      &__block {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+  }
+}
+@media screen and (min-width: vars.$laptop-l) {
+  .container {
+    padding-inline: 235px;
+  }
+}
+@media screen and (min-width: vars.$full-hd) {
+  .container {
+    padding-inline: 400px;
+  }
+  .section1 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .main__btn {
+    &__btn {
+    @include mixins.Roboto (16px, 400, 1.6px);
+    background-color: colors.$primary;
+    padding: 25px 41px;
+    color: colors.$white;
+  }
+}
+  .list {
+    gap: 60px;
+    &__Item {
+      gap: 20px;
+      
+      &__block {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+      }
+    }
+  }
+  .section4 {
+  &__video {
+    width: 721px;
+    height: 390px;
+  
+  & > svg {
+    width: 65px;
+    height: 65px;
+  }
+ }
+}
+}
