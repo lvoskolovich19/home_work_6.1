@@ -1,0 +1,55 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: #f4f4f9;
+  margin-top: 50px;
+}
+
+svg {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.square {
+  fill: #ff6b6b;
+  stroke: #c92a2a;
+  stroke-width: 4px;
+}
+
+.rectangle {
+  fill: #4dadf7;
+  stroke: #1971c2;
+  stroke-width: 8px;
+}
+
+.circle {
+  fill: #51cf66;
+  stroke: #2b8a3e;
+  stroke-width: 6px;
+}
+
+.ellipse {
+  fill: #fcc419;
+  stroke: #e67700;
+  stroke-width: 5px;
+}
+
+.animated-shape {
+  animation: changeColors 4s infinite alternate ease-in-out;
+}
+
+@keyframes changeColors {
+  0% {
+    fill: #fcc419;
+    stroke: #e67700;
+  }
+  50% {
+    fill: #9c36b5;
+    stroke: #4a0e4e;
+  }
+  100% {
+    fill: #20c997;
+    stroke: #0ca678;
+  }
+}
